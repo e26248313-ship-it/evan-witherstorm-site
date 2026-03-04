@@ -2,96 +2,73 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>WITHER STORM PROJECT</title>
+<title>Wither Storm Project</title>
 
 <style>
 body {
-    background-color: #0a0a0a;
-    color: lime;
+    background-color: black;
+    color: #00ff00;
     font-family: monospace;
     text-align: center;
+    margin-top: 80px;
 }
 
 h1 {
-    font-size: 45px;
-    margin-top: 40px;
-}
-
-p {
-    font-size: 18px;
-}
-
-.box {
-    border: 2px solid lime;
-    padding: 20px;
-    margin: 20px;
-    display: inline-block;
-    background-color: rgba(0, 255, 0, 0.05);
-}
-
-/* EFECTO GLITCH */
-.glitch {
+    font-size: 40px;
     position: relative;
-    color: lime;
-    animation: glitch 0.5s infinite;
-}
-
-.glitch::before,
-.glitch::after {
-    content: "WITHER STORM PROJECT";
-    position: absolute;
-    left: 0;
-    width: 100%;
-}
-
-.glitch::before {
-    color: red;
-    animation: glitchTop 0.5s infinite;
-}
-
-.glitch::after {
-    color: blue;
-    animation: glitchBottom 0.5s infinite;
+    color: white;
+    animation: glitch 1s infinite;
 }
 
 @keyframes glitch {
-    0% { transform: none; }
-    20% { transform: skew(-2deg); }
-    40% { transform: skew(2deg); }
-    60% { transform: none; }
-    80% { transform: skew(1deg); }
-    100% { transform: none; }
+    0% { text-shadow: 2px 2px red, -2px -2px blue; }
+    25% { text-shadow: -2px 2px red, 2px -2px blue; }
+    50% { text-shadow: 2px -2px red, -2px 2px blue; }
+    75% { text-shadow: -2px -2px red, 2px 2px blue; }
+    100% { text-shadow: 2px 2px red, -2px -2px blue; }
 }
 
-@keyframes glitchTop {
-    0% { clip-path: inset(0 0 50% 0); transform: translate(-2px,-2px); }
-    50% { clip-path: inset(0 0 50% 0); transform: translate(2px,2px); }
-    100% { clip-path: inset(0 0 50% 0); transform: translate(-2px,-2px); }
+.button-box {
+    border: 2px solid #00ff00;
+    padding: 30px;
+    width: 250px;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-@keyframes glitchBottom {
-    0% { clip-path: inset(50% 0 0 0); transform: translate(2px,2px); }
-    50% { clip-path: inset(50% 0 0 0); transform: translate(-2px,-2px); }
-    100% { clip-path: inset(50% 0 0 0); transform: translate(2px,2px); }
+.button-box:hover {
+    background-color: #003300;
+}
+
+a {
+    text-decoration: none;
+    color: #00ff00;
+    font-size: 16px;
 }
 </style>
 </head>
 
 <body>
 
-<h1 class="glitch">WITHER STORM PROJECT</h1>
+<h1>WITHER STORM PROJECT</h1>
 
-<div class="box">
-    <p>Phase Development Versions</p>
-    <p>v0.1 - v0.6.3</p>
-</div>
+<a href="phases.html">
+    <div class="button-box">
+        Phase Development Versions<br>
+        v0.1 - v0.6.3
+    </div>
+</a>
 
-<div class="box">
-    <p>Corrupted Experiments</p>
-    <p>Classified Files</p>
-</div>
+<a href="classified.html">
+    <div class="button-box">
+        Corrupted Experiments<br>
+        Classified Files
+    </div>
+</a>
 
-<p>Created by Evan Ommar</p>
+<p style="margin-top:60px;">Created by Evan Ommar</p>
 
 </body>
 </html>
