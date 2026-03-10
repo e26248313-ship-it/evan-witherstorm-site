@@ -1,88 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Void Dominion</title>
 
 <style>
-body {
-    margin: 0;
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    overflow-x: hidden;
+
+body{
+margin:0;
+background:black;
+color:white;
+font-family:Arial, sans-serif;
+text-align:center;
+overflow-x:hidden;
 }
 
-/* Fondo animado */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, #1a001a 0%, #000 70%);
-    z-index: -1;
-    animation: pulse 4s infinite alternate;
+/* fondo animado */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle at center,#320032,#000000);
+z-index:-1;
+animation:pulse 4s infinite alternate;
 }
 
-@keyframes pulse {
-    from { opacity: 0.8; }
-    to { opacity: 1; }
+@keyframes pulse{
+from{opacity:0.8;}
+to{opacity:1;}
 }
 
-/* Glitch */
-.glitch {
-    font-size: 3em;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-    animation: glitch 1s infinite;
+/* titulo glitch */
+
+.glitch{
+font-size:3em;
+font-weight:bold;
+position:relative;
+display:inline-block;
+animation:glitch 1s infinite;
 }
 
-@keyframes glitch {
-    0% { text-shadow: 2px 2px red, -2px -2px blue; }
-    20% { text-shadow: -2px 2px red, 2px -2px blue; }
-    40% { text-shadow: 2px -2px red, -2px 2px blue; }
-    60% { text-shadow: -2px -2px red, 2px 2px blue; }
-    80% { text-shadow: 2px 2px red, -2px -2px blue; }
-    100% { text-shadow: -2px 2px red, 2px -2px blue; }
+@keyframes glitch{
+0%{text-shadow:2px 2px red,-2px -2px blue;}
+25%{text-shadow:-2px 2px red,2px -2px blue;}
+50%{text-shadow:2px -2px red,-2px 2px blue;}
+75%{text-shadow:-2px -2px red,2px 2px blue;}
+100%{text-shadow:2px 2px red,-2px -2px blue;}
 }
 
-/* Botón */
-.download-btn {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background: purple;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+/* contenedor */
+
+.container{
+margin-top:120px;
 }
 
-.download-btn:hover {
-    background: darkviolet;
-    transform: scale(1.1);
+/* botones */
+
+.btn{
+display:block;
+width:260px;
+margin:15px auto;
+padding:15px;
+font-size:18px;
+color:white;
+background:linear-gradient(45deg,purple,magenta);
+border-radius:10px;
+text-decoration:none;
+transition:0.3s;
 }
+
+.btn:hover{
+transform:scale(1.1);
+background:linear-gradient(45deg,magenta,purple);
+}
+
+/* botones secundarios */
+
+.btn2{
+background:#00aa00;
+}
+
+.btn2:hover{
+background:#00ff00;
+}
+
+.btn3{
+background:#5865F2;
+}
+
+.btn3:hover{
+background:#7289da;
+}
+
 </style>
+
 </head>
 
 <body>
+
+<div class="container">
 
 <h1 class="glitch">VOID DOMINION</h1>
 
 <p>El poder del vacío ha despertado.</p>
 
 <a href="https://www.mediafire.com/file/e22e1a5fzjvse4c/void_dominion.mcaddon/file"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="download-btn">
-   Descargar Void Dominion ⚡
+target="_blank"
+class="btn">
+Descargar Void Dominion ⚡
 </a>
+
+<a href="phases.html" class="btn btn2">
+Phase Development Files
+</a>
+
+<a href="https://discord.gg/VGRpU8fb5"
+target="_blank"
+class="btn btn3">
+Unirse al Discord
+</a>
+
+</div>
 
 </body>
 </html>
